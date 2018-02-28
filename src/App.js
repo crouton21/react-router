@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Animals from './pages/Animals/Animals';
 import Details from './pages/Details/Details';
+import Search from './pages/Search/Search';
 
 class App extends Component {
   render() {
@@ -26,6 +27,9 @@ class App extends Component {
               <li>
                 <Link to="/details">Details</Link>
               </li>
+              <li>
+                <Link to="/search">Search</Link>
+              </li>
             </ul>
 
             <hr />
@@ -34,8 +38,13 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/animals" component={Animals} />
 
-            {/* Required Parameter */}
+            {/* Required Parameter, make optional by adding a '?' */}
             <Route path="/details/:id" component={Details} />
+
+            {/* Search Parameters */}
+            {/* This on is tricky, more information can be found here */}
+            {/* https://github.com/ReactTraining/react-router/issues/4410#issuecomment-316239553 */}
+            <Route path="/search" component={Search} />
           </div>
         </Router>
       </div>
