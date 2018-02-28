@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // Page components
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Topics from './pages/Topics/Topics';
+import Animals from './pages/Animals/Animals';
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
                 <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/topics">Topics</Link>
+                <Link to="/animals">Animals</Link>
               </li>
             </ul>
 
@@ -28,7 +28,7 @@ class App extends Component {
 
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/topics" component={Topics} />
+            <Route path="/animals" component={Animals} />
           </div>
         </Router>
       </div>
