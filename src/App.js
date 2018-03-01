@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // Page components
 import Home from './pages/Home/Home';
@@ -12,41 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/animals">Animals</Link>
-              </li>
-              <li>
-                <Link to="/details">Details</Link>
-              </li>
-              <li>
-                <Link to="/search">Search</Link>
-              </li>
-            </ul>
-
-            <hr />
-
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/animals" component={Animals} />
-
-            {/* Required Parameter, make optional by adding a '?' */}
-            <Route path="/details/:id" component={Details} />
-
-            {/* Search Parameters */}
-            {/* This on is tricky, more information can be found here */}
-            {/* https://github.com/ReactTraining/react-router/issues/4410#issuecomment-316239553 */}
-            <Route path="/search" component={Search} />
-          </div>
-        </Router>
+        
       </div>
     );
   }
